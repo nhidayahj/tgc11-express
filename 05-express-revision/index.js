@@ -2,7 +2,9 @@ const express = require('express')
 const hbs = require('hbs')
 const wax = require('wax-on')
 
+
 let app = express()
+
 
 app.get('/', (req,res) => {
     res.send("Booking for Japanese Sakura Restaurant")
