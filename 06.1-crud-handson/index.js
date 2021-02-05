@@ -15,9 +15,11 @@ app.use(express.urlencoded({
     extended: false
 }))
 
+// API Movie URL
 const baseURL = "https://ckx-movies-api.herokuapp.com";
 
 // SETUP ENDS HERE
+
 
 // SETUP of Routes begin below
 //1. beginning of root route
@@ -34,24 +36,21 @@ app.get('/movies', async (req,res) => {
 })
 
 app.get('/movies/create', (req,res) => {
-    res.render('add_movies');
-    res.send('Movie added')
+    res.render('add_movies.hbs');    
 })
 
 
-//this route processes the movie form
-app.post('/movies', (req,res)=>{
-    console.log(req.body);
-    res.send("Movie added");
+app.post('/movies/create', async (req,res)=>{
+    // console.log(req.body);
+    // res.send("New Movie added")
+    let title = req.body.title;
+    let plot = req.body.plot;
+    let response = await axios.post(baseURL + '/movie/create', {
+        'title': title,
+        'plot': plot
+    })
+    res.redirect('/movies')
 })
-
-//this route displays the form
-// app.get('/movies/add', (req,res)=>{
-//     res.render('add_movies.hbs')
-// })
-
-
-
 
 
 app.listen(3000, ()=>{

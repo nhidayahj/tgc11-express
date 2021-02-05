@@ -1,0 +1,21 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+
+
+<form method="POST">
+    <h2>Add a Movie</h2>
+    <div>
+        <label class="form-label">Movie Title</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div>
+        <label class="form-label">Movie Plot</label>
+        <textarea name="plot" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary mt-3">Add Movie</button>
+</form>
+
+
+{{/block}}
+
+{{/extends}}
