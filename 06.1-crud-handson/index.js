@@ -39,6 +39,10 @@ app.get('/movies/create', (req,res) => {
     res.render('add_movies.hbs');    
 })
 
+app.get('/movies/delete', (req,res) => {
+    res.render('delete_movie.hbs');
+})
+
 
 app.post('/movies/create', async (req,res)=>{
     // console.log(req.body);
