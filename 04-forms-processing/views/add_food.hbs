@@ -1,0 +1,73 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+
+<h1>Add a Food</h1>
+<form method="POST">
+    <label class="form-label">Enter food</label>
+    <input type="text" name="food_name" class="form-control" placeholder="Enter food name">
+
+    <div class="mt-3">
+        <label class="form-label">Calories</label>
+        <input type="text" class="form-control" name="calories" id="calories">
+    </div>
+
+    <div>
+        <label class="form-label mt-3">Meal Type</label>
+{{!-- Creating Radio Buttons --}}
+        <div class="form-check form-check-inline">
+            <div class="ml-3">
+                <input type="radio" name="meal" value="breakfast">
+                <label class="form-check-label">Breakfast</label>
+            </div>
+            <div class="ml-3">
+                <input type="radio" name="meal" value="lunch">
+                <label class="form-check-label">Lunch</label>
+            </div>
+            <div class="ml-3">
+                <input type="radio" name="meal" value="breakfast">
+                <label class="form-check-label">Dinner</label>
+            </div>
+        </div>
+    </div>
+{{!-- Creating Checkboxes --}}
+    <div>
+        <label class="form-label">Mood</label>
+        <div class="form-check form-check-inline">
+            <div class="ml-3">
+                <input type="checkbox" name="mood" value="Excited">
+                <label class="form-check-label">Excited</label>
+            </div>
+            <div class="ml-3">
+                <input type="checkbox" name="mood" value="Depressed">
+                <label class="form-check-label">Depressed</label>
+            </div>
+            <div class="ml-3">
+                <input type="checkbox" name="mood" value="Frustrated">
+                <label class="form-check-label">Frustrated</label>
+            </div>
+        </div>
+    </div>
+
+
+{{!-- Creating Dropdown --}}
+    <div>
+        <label class="form-label">Cuisine</label>
+        <select class="form-control" name="cuisine">
+            <option value="japanese">Japanese</option>
+            <option value="western">Western</option>
+            <option value="korean">Korean</option>
+        </select>
+    </div>
+     <div class="mt-3">
+        <label class="form-label">Music Genre</label>
+        <select class="form-control" name="music" multiple>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="blues">Blues</option>
+        </select>
+    </div>
+
+    <input type="submit" class="mt-3">
+</form>
+{{/block}}
+{{/extends}}
