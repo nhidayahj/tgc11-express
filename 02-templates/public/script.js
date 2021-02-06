@@ -1,0 +1,1 @@
+alert('This alert of welcome.hbs file')

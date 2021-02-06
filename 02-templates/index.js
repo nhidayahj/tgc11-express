@@ -25,6 +25,15 @@ app.get('/about-us', (req,res)=>{
     res.render("welcome.hbs");
 })
 
+app.get('/lucky', (req,res) => {
+    //render the respective file
+    let lucky = Math.floor(Math.random() * 1000)
+    res.render('lucky.hbs', {
+        luckyNum: lucky
+    })
+
+})
+
 app.listen(3000, () => {
     console.log("Server has started")
 })
