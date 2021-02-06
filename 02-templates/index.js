@@ -9,7 +9,9 @@ let app = express()
 // all our template/static files
 app.set('view engine', 'hbs');
 
-// tells Express where to look for the files
+// tells Express where to look for the static files
+// static files includes image files, css files, json files etc
+// since our folder name is 'public', the name is in the brackets 
 app.use(express.static('public'))
 
 // Add the Routes 
