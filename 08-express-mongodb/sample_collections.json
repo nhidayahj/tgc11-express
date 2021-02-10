@@ -4,7 +4,7 @@
     "ingredients": [
         {
             "type":"protein",
-            "name":"chicken",
+            "name":"whole chicken",
             "quantity":"500g"
         }, 
         {
@@ -17,14 +17,5 @@
         "Skin the chicken",
         "Boil the chicken as a stock"
         
-    ],
-    "cuisine": [
-        "chinese"
-    ], 
-    "tags": [
-        "rice","singapore","malaysian","steamed"
-    ],
-    "cooking_method": [
-        "steamed"
     ]
 }

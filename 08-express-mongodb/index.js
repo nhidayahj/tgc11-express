@@ -29,10 +29,22 @@ app.use(express.urlencoded({
 }))
 
 async function main() {
-    let db = await MongoUtil.connect(mongoUrl, 'tgc11_movie_app')
+    let db = await MongoUtil.connect(mongoUrl, 'tgc11_recipe_app')
 
     // mongoDB is connected and live
-    app.get('/')
+
+    app.get('/ingredients/create', (req,res) => {
+        res.render('ingredients/create')
+    })
+
+    
+    app.post('/ingredients/create', async (req,res)=> {
+        await db.collection('recipes').insertOne({
+            'name': req.body.ingredientName
+        })
+        res.send("Ingredient has been added")
+    })
+
 
 }
 
