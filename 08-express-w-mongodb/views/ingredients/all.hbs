@@ -1,0 +1,13 @@
+{{#extends 'base'}}
+
+{{#block 'content'}}
+<label class="form-label">All Ingredient List</label>
+<ul>
+    {{#each ingredientList}}
+        <li>{{this.name}}</li>
+    {{/each}}
+</ul>
+
+{{/block}}
+
+{{/extends}}

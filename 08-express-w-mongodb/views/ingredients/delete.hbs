@@ -1,0 +1,14 @@
+{{#extends 'base'}}
+
+{{#block 'content'}}
+<form method="POST">
+    <div class="alert alert-danger">
+        Are you sure you want to delete '{{ingredient.name}}'?
+    </div>
+    <input type="submit" class="btn btn-danger btn-sm mt-3" value="Yes"/>
+    <a href="/ingredients" class="btn btn-primary btn-sm mt-3">No</a>
+</form>
+
+{{/block}}
+
+{{/extends}}
